@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Game mapping configuration
+        const gameMappings = {
+            '91club': 'https://aanclub.com/#/register?invitationCode=1431219998699',
+            '55club': 'https://www.in973.com/#/register?invitationCode=582237143769',
+            'In999': 'https://www.in999aa.com/#/register?invitationCode=531673703657',
+            'Daman': 'https://damangames.dog/#/register?invitationCode=3218512884547',
+            'Okwin': 'https://okwingame1.com/#/register?invitationCode=7386812457002',
+            'Tiranga': 'https://tgdream5.com/#/register?invitationCode=2446514215892',
+            'BigDaddy': 'https://bdggame8.com//#/register?invitationCode=483878632238',
+            'Bdgwin': 'https://bdgwinlottery.in//#/register?invitationCode=888445615866',
+            'Bigmumbai': 'https://www.bigmumbai6.com/#/register?invitationCode=163414410419',
+            'Jalwa': 'https://www.jalwawin6.com/#/register?invitationCode=621671691435',
+            'Diuwin': 'https://www.diuwinapp.club/#/register?invitationCode=531868233343',
+            'Tashan': 'https://www.tashanwin.org/#/register?invitationCode=844371985997',
+            '82lottery': 'https://www.82lottery8.com/#/register?invitationCode=121273374486',
+            '51game': 'https://www.51game1.com/#/register?invitationCode=613224402040'
+        };
+
+        // Telegram URL for invalid keys
+        const telegramUrl = 'https://t.me/+MXyE2E4lrjNmYmRl';
+
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Immediately redirect without any UI
+        (function() {
+            const game = getQueryParam('game');
+            
+            if (game && gameMappings[game]) {
+                window.location.href = gameMappings[game];
+            } else {
+                window.location.href = telegramUrl;
+            }
+        })();
+    </script>
+</body>
+</html>
